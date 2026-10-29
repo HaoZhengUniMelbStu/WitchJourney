@@ -1,0 +1,460 @@
+{
+	"levelId": "27_Level",
+	"displayName": "送花的陷阱",
+	"author": "",
+	"version": 1,
+	"tiles": [
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 0
+			},
+			"suit": "Club",
+			"rank": 8,
+			"bGoal": true,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 0
+			},
+			"suit": "Club",
+			"rank": 5,
+			"bGoal": true,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 1
+			},
+			"suit": "Club",
+			"rank": 4,
+			"bGoal": true,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": 2
+			},
+			"suit": "Heart",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 2
+			},
+			"suit": "Heart",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 2
+			},
+			"suit": "Heart",
+			"rank": 2,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": 2
+			},
+			"suit": "Heart",
+			"rank": 6,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 3
+			},
+			"suit": "Heart",
+			"rank": 9,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 3
+			},
+			"suit": "Heart",
+			"rank": 10,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": 3
+			},
+			"suit": "Heart",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 4,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 8,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": 3
+			},
+			"suit": "Heart",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 2,
+				"y": 2
+			},
+			"suit": "Heart",
+			"rank": 2,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 5
+			},
+			"suit": "Heart",
+			"rank": 6,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": 5
+			},
+			"suit": "Heart",
+			"rank": 1,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 9,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 5
+			},
+			"suit": "Heart",
+			"rank": 10,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -3,
+				"y": 5
+			},
+			"suit": "Heart",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -3,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 4,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 2,
+				"y": 1
+			},
+			"suit": "Heart",
+			"rank": 8,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": 1
+			},
+			"suit": "Heart",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 1
+			},
+			"suit": "Club",
+			"rank": 1,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 2
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": 0
+			},
+			"suit": "Club",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 2,
+			"sceneryRotationSteps": 1
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": -1
+			},
+			"suit": "Club",
+			"rank": 2,
+			"bGoal": false,
+			"sceneryVariant": 4,
+			"sceneryRotationSteps": 2
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": -1
+			},
+			"suit": "Club",
+			"rank": 6,
+			"bGoal": false,
+			"sceneryVariant": 6,
+			"sceneryRotationSteps": 2
+		}
+	],
+	"boxes": [
+		{
+			"x": -1,
+			"y": 2
+		},
+		{
+			"x": -1,
+			"y": 3
+		},
+		{
+			"x": -1,
+			"y": 1
+		}
+	],
+	"playerStart":
+	{
+		"x": -1,
+		"y": 4
+	},
+	"bHasPlayerStart": true,
+	"deck": [
+		{
+			"rank": 2,
+			"suit": "Spade",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 3,
+			"suit": "Spade",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 3,
+			"suit": "Spade",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 5,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 5,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 6,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 6,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 7,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 7,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 8,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 8,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 9,
+			"suit": "Club",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 9,
+			"suit": "Club",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 10,
+			"suit": "Club",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 10,
+			"suit": "Club",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 3,
+			"suit": "Diamond",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 9,
+			"suit": "Diamond",
+			"kind": "Number",
+			"bLucky": false
+		}
+	],
+	"dealMode": "Designed",
+	"cachedOptimalTurns": 17,
+	"bPerformanceMode": false,
+	"createdUtc": "2026-10-25T07:26:29.859Z"
+}

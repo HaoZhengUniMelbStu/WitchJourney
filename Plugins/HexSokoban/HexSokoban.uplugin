@@ -1,0 +1,29 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "0.1.0",
+	"FriendlyName": "Hex Sokoban",
+	"Description": "Hexagonal Sokoban gameplay framework: hex tiles, goal tiles, pushable boxes, a grid movement component and a complete puzzle game loop (undo / restart / next level).",
+	"Category": "Gameplay",
+	"CreatedBy": "kurogameExamDemo",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "HexSokoban",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "EnhancedInput",
+			"Enabled": true
+		},
+		{
+			"Name": "Niagara",
+			"Enabled": true
+		}
+	]
+}

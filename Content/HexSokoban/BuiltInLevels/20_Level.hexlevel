@@ -1,0 +1,224 @@
+{
+	"levelId": "20_Level",
+	"displayName": "四处碰壁",
+	"author": "",
+	"version": 1,
+	"tiles": [
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 0
+			},
+			"suit": "Spade",
+			"rank": 4,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 1
+			},
+			"suit": "Club",
+			"rank": 10,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 1
+			},
+			"suit": "Diamond",
+			"rank": 10,
+			"bGoal": true,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": 0
+			},
+			"suit": "Diamond",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": 1
+			},
+			"suit": "Heart",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 2
+			},
+			"suit": "Club",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 4,
+			"sceneryRotationSteps": 2
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 2
+			},
+			"suit": "Diamond",
+			"rank": 2,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": 2
+			},
+			"suit": "Diamond",
+			"rank": 6,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 2,
+				"y": 1
+			},
+			"suit": "Diamond",
+			"rank": 9,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 2,
+				"y": 0
+			},
+			"suit": "Diamond",
+			"rank": 8,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 2,
+				"y": -1
+			},
+			"suit": "Diamond",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": -1
+			},
+			"suit": "Diamond",
+			"rank": 4,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": -1
+			},
+			"suit": "Diamond",
+			"rank": 8,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 0
+			},
+			"suit": "Diamond",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 3
+			},
+			"suit": "Diamond",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 1,
+			"sceneryRotationSteps": 0
+		}
+	],
+	"boxes": [
+		{
+			"x": 0,
+			"y": 1
+		}
+	],
+	"playerStart":
+	{
+		"x": 0,
+		"y": 0
+	},
+	"bHasPlayerStart": true,
+	"deck": [
+		{
+			"rank": 10,
+			"suit": "Diamond",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 5,
+			"suit": "Spade",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 4,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		}
+	],
+	"dealMode": "Designed",
+	"cachedOptimalTurns": 3,
+	"bPerformanceMode": false,
+	"createdUtc": "2026-10-23T17:04:16.965Z"
+}

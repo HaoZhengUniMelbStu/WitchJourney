@@ -1,0 +1,3 @@
+Noto Sans SC (subset: ASCII + GB2312 + symbols), from Noto Sans CJK by Google / Adobe.
+Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'.
+Licensed under the SIL Open Font License, Version 1.1 - https://openfontlicense.org

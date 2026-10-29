@@ -1,0 +1,214 @@
+{
+	"levelId": "16_Level",
+	"displayName": "初见",
+	"author": "",
+	"version": 1,
+	"tiles": [
+		{
+			"coord":
+			{
+				"x": -6,
+				"y": 6
+			},
+			"suit": "Heart",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 0
+		},
+		{
+			"coord":
+			{
+				"x": -6,
+				"y": 5
+			},
+			"suit": "Heart",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 0
+		},
+		{
+			"coord":
+			{
+				"x": -6,
+				"y": 7
+			},
+			"suit": "Diamond",
+			"rank": 6,
+			"bGoal": false,
+			"sceneryVariant": 0
+		},
+		{
+			"coord":
+			{
+				"x": -6,
+				"y": 8
+			},
+			"suit": "Heart",
+			"rank": 8,
+			"bGoal": true,
+			"sceneryVariant": 0
+		},
+		{
+			"coord":
+			{
+				"x": -5,
+				"y": 7
+			},
+			"suit": "Heart",
+			"rank": 2,
+			"bGoal": false,
+			"sceneryVariant": 1
+		},
+		{
+			"coord":
+			{
+				"x": -5,
+				"y": 6
+			},
+			"suit": "Heart",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 1
+		},
+		{
+			"coord":
+			{
+				"x": -5,
+				"y": 5
+			},
+			"suit": "Heart",
+			"rank": 4,
+			"bGoal": false,
+			"sceneryVariant": 1
+		},
+		{
+			"coord":
+			{
+				"x": -5,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 9,
+			"bGoal": false,
+			"sceneryVariant": 1
+		},
+		{
+			"coord":
+			{
+				"x": -6,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 10,
+			"bGoal": false,
+			"sceneryVariant": 3
+		},
+		{
+			"coord":
+			{
+				"x": -5,
+				"y": 8
+			},
+			"suit": "Heart",
+			"rank": 6,
+			"bGoal": false,
+			"sceneryVariant": 1
+		},
+		{
+			"coord":
+			{
+				"x": -6,
+				"y": 9
+			},
+			"suit": "Heart",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 3
+		},
+		{
+			"coord":
+			{
+				"x": -7,
+				"y": 9
+			},
+			"suit": "Heart",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 3
+		},
+		{
+			"coord":
+			{
+				"x": -7,
+				"y": 5
+			},
+			"suit": "Heart",
+			"rank": 2,
+			"bGoal": false,
+			"sceneryVariant": 3
+		},
+		{
+			"coord":
+			{
+				"x": -7,
+				"y": 6
+			},
+			"suit": "Heart",
+			"rank": 1,
+			"bGoal": false,
+			"sceneryVariant": 0
+		},
+		{
+			"coord":
+			{
+				"x": -7,
+				"y": 7
+			},
+			"suit": "Diamond",
+			"rank": 4,
+			"bGoal": false,
+			"sceneryVariant": 0
+		},
+		{
+			"coord":
+			{
+				"x": -7,
+				"y": 8
+			},
+			"suit": "Diamond",
+			"rank": 9,
+			"bGoal": false,
+			"sceneryVariant": 0
+		}
+	],
+	"boxes": [
+		{
+			"x": -6,
+			"y": 6
+		}
+	],
+	"playerStart":
+	{
+		"x": -6,
+		"y": 5
+	},
+	"bHasPlayerStart": true,
+	"deck": [
+		{
+			"rank": 5,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 6,
+			"suit": "Club",
+			"kind": "Number",
+			"bLucky": false
+		}
+	],
+	"dealMode": "Designed",
+	"cachedOptimalTurns": 2,
+	"bPerformanceMode": false,
+	"createdUtc": "2026-10-25T03:45:34.466Z"
+}

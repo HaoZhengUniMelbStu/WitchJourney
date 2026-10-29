@@ -1,0 +1,522 @@
+{
+	"levelId": "25_Level",
+	"displayName": "真相",
+	"author": "",
+	"version": 1,
+	"tiles": [
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": -1
+			},
+			"suit": "Spade",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": -1
+			},
+			"suit": "Club",
+			"rank": 8,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": -1
+			},
+			"suit": "Club",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 0
+			},
+			"suit": "Club",
+			"rank": 8,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -3,
+				"y": 0
+			},
+			"suit": "Club",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -3,
+				"y": 1
+			},
+			"suit": "Club",
+			"rank": 4,
+			"bGoal": true,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": 1
+			},
+			"suit": "Club",
+			"rank": 10,
+			"bGoal": true,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 1
+			},
+			"suit": "Spade",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": 2
+			},
+			"suit": "Spade",
+			"rank": 1,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -3,
+				"y": 2
+			},
+			"suit": "Spade",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 2
+			},
+			"suit": "Heart",
+			"rank": 4,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -3,
+				"y": 3
+			},
+			"suit": "Heart",
+			"rank": 2,
+			"bGoal": false,
+			"sceneryVariant": 0,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": 0
+			},
+			"suit": "Club",
+			"rank": 9,
+			"bGoal": false,
+			"sceneryVariant": 6,
+			"sceneryRotationSteps": 3
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": -2
+			},
+			"suit": "Club",
+			"rank": 6,
+			"bGoal": false,
+			"sceneryVariant": 4,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": -2
+			},
+			"suit": "Club",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 6,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": -2
+			},
+			"suit": "Club",
+			"rank": 2,
+			"bGoal": false,
+			"sceneryVariant": 4,
+			"sceneryRotationSteps": 1
+		},
+		{
+			"coord":
+			{
+				"x": -3,
+				"y": -1
+			},
+			"suit": "Club",
+			"rank": 6,
+			"bGoal": false,
+			"sceneryVariant": 2,
+			"sceneryRotationSteps": 4
+		},
+		{
+			"coord":
+			{
+				"x": -4,
+				"y": 0
+			},
+			"suit": "Club",
+			"rank": 10,
+			"bGoal": false,
+			"sceneryVariant": 4,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -4,
+				"y": 1
+			},
+			"suit": "Club",
+			"rank": 9,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -4,
+				"y": 2
+			},
+			"suit": "Club",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 5,
+			"sceneryRotationSteps": 3
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": -3
+			},
+			"suit": "Club",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 1
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": -3
+			},
+			"suit": "Club",
+			"rank": 1,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 4
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": -2
+			},
+			"suit": "Diamond",
+			"rank": 9,
+			"bGoal": false,
+			"sceneryVariant": 1,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": 3
+			},
+			"suit": "Heart",
+			"rank": 7,
+			"bGoal": false,
+			"sceneryVariant": 2,
+			"sceneryRotationSteps": 2
+		},
+		{
+			"coord":
+			{
+				"x": 1,
+				"y": -1
+			},
+			"suit": "Club",
+			"rank": 4,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 1
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 0
+			},
+			"suit": "Heart",
+			"rank": 6,
+			"bGoal": false,
+			"sceneryVariant": 2,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 1
+			},
+			"suit": "Heart",
+			"rank": 10,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -1,
+				"y": 3
+			},
+			"suit": "Heart",
+			"rank": 3,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": 0,
+				"y": 2
+			},
+			"suit": "Heart",
+			"rank": 8,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -2,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 2,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -3,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 9,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -4,
+				"y": 4
+			},
+			"suit": "Heart",
+			"rank": 5,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		},
+		{
+			"coord":
+			{
+				"x": -4,
+				"y": 3
+			},
+			"suit": "Heart",
+			"rank": 8,
+			"bGoal": false,
+			"sceneryVariant": 3,
+			"sceneryRotationSteps": 0
+		}
+	],
+	"boxes": [
+		{
+			"x": -1,
+			"y": 0
+		},
+		{
+			"x": -1,
+			"y": 1
+		}
+	],
+	"playerStart":
+	{
+		"x": 0,
+		"y": -1
+	},
+	"bHasPlayerStart": true,
+	"deck": [
+		{
+			"rank": 1,
+			"suit": "Spade",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 1,
+			"suit": "Spade",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 2,
+			"suit": "Spade",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 2,
+			"suit": "Spade",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 3,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 3,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 4,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 4,
+			"suit": "Heart",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 5,
+			"suit": "Club",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 5,
+			"suit": "Club",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 6,
+			"suit": "Club",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 6,
+			"suit": "Club",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 7,
+			"suit": "Diamond",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 7,
+			"suit": "Diamond",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 8,
+			"suit": "Diamond",
+			"kind": "Number",
+			"bLucky": false
+		},
+		{
+			"rank": 8,
+			"suit": "Diamond",
+			"kind": "Number",
+			"bLucky": false
+		}
+	],
+	"dealMode": "Designed",
+	"cachedOptimalTurns": 16,
+	"bPerformanceMode": false,
+	"createdUtc": "2026-10-25T06:23:29.938Z"
+}
