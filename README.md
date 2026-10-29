@@ -6,6 +6,8 @@
 
 ![魔女之旅 主菜单](Docs/Images/main_menu.gif)
 
+![魔女之旅 游玩画面](Docs/Images/gameplay.png)
+
 **[下载可游玩版本（Windows）](https://github.com/HaoZhengUniMelbStu/WitchJourney/releases/latest)**
 
 ---
