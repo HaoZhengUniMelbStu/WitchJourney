@@ -4,11 +4,11 @@
 
 《魔女之旅》是一款以魔女伊蕾娜的旅行为主题的单人解谜游戏，把六边形推箱子、扑克牌匹配和手牌规划放进了同一道题里。你一边安排旅途，一边把箱子推到目标地台上。
 
-![魔女之旅 主菜单](Docs/Images/main_menu.gif)
+<p align="center"><img src="Docs/Images/main_menu.gif" width="800" alt="魔女之旅 主菜单"></p>
 
-![魔女之旅 游玩画面](Docs/Images/gameplay.png)
+<p align="center"><img src="Docs/Images/gameplay.png" width="800" alt="魔女之旅 游玩画面"></p>
 
-**[下载可游玩版本（Windows）](https://github.com/HaoZhengUniMelbStu/WitchJourney/releases/latest)**
+<p align="center"><b><a href="https://github.com/HaoZhengUniMelbStu/WitchJourney/releases/latest">⬇ 下载可游玩版本（Windows）</a></b></p>
 
 ---
 
@@ -24,9 +24,9 @@
 
 另一半灵感来自我在墨尔本大学 **AI Planning** 课程锦标赛里接触到的扑克牌连线桌游 *Sequence*。棋盘的每一格对应一张扑克牌，玩家手里有几张牌，打出哪张牌，就能在对应的格子上落子，最后连成五子获胜。我很喜欢“手里牌的点数和花色决定你能走到哪里”这种对应关系：玩家摸到手牌后要思考先落哪个、后落哪个，一下子就把简单的五子连线变成了一个既有随机性、又需要思考的桌游。于是我就想：能不能把它和推箱子结合起来？
 
-![早期原型](Docs/Images/prototype.png)
+<p align="center"><img src="Docs/Images/prototype.png" width="600" alt="早期原型"></p>
 
-*最早的玩法原型：六边形地台上标着花色和点数，底部是手牌，打出匹配的牌才能走上相邻的地台。*
+<p align="center"><i>最早的玩法原型：六边形地台上标着花色和点数，底部是手牌，打出匹配的牌才能走上相邻的地台。</i></p>
 
 结果就是现在的《魔女之旅》：**每个地台都有一种花色和一个点数，你只能打出花色相同或者点数相同的手牌，才能走上去。** 这是整个游戏最基本也最核心的规则，后面的技能牌都是在这套系统上锦上添花。出牌方式也从点击地台改成了把手牌拖到相邻地台上，顺带解决了误触的问题。
 
@@ -69,15 +69,15 @@
 
 花色相同，就是用对的方法走对的路：红桃 5 可以带你穿过任意点数的草地。
 
-![同花色走正路](Docs/Images/same_suit.gif)
+<p align="center"><img src="Docs/Images/same_suit.gif" width="640" alt="同花色走正路"></p>
 
-*同花色：打出红桃牌“指南针”，伊蕾娜穿过草地。*
+<p align="center"><i>同花色：打出红桃牌“指南针”，伊蕾娜穿过草地。</i></p>
 
 不过伊蕾娜是个古灵精怪的屑魔女，她总有些取巧的办法。点数相同的时候，红桃 5 也能让你走上**方块 5** 的水域：指南针并没有突然变成船，而是成了伊蕾娜换取船票的筹码。右侧的**旅行报幕**会像旅行日记一样，把这些临场发挥记下来。
 
-![同点数想办法](Docs/Images/same_rank.gif)
+<p align="center"><img src="Docs/Images/same_rank.gif" width="640" alt="同点数想办法"></p>
 
-*同点数：用梅花 6“贿赂守卫”走上方块 6 的水域，旅行报幕记下“伊蕾娜在镇上买到了一张船票，通过了水域”。*
+<p align="center"><i>同点数：用梅花 6“贿赂守卫”走上方块 6 的水域，旅行报幕记下“伊蕾娜在镇上买到了一张船票，通过了水域”。</i></p>
 
 <p align="center"><img src="Docs/Images/narration.png" width="560" alt="旅行报幕"></p>
 
@@ -96,9 +96,9 @@
 
 这个设计最有趣的地方在于：开局往往很轻松，牌多、路宽，怎么走都行；但随着手牌越来越少，你可能会发现，某一步需要的恰好是很久以前随手打掉的那张牌。这也是这个游戏在推箱子路径规划上最精华的部分。
 
-![最需要的那张牌早就打掉了](Docs/Images/hand_runs_out.gif)
+<p align="center"><img src="Docs/Images/hand_runs_out.gif" width="640" alt="最需要的那张牌早就打掉了"></p>
 
-*第 4 关：前面几步走得很顺，到了最后推箱子的一步，手里只剩红桃 6，而箱子所在的地台需要方块或 A。需要的那张牌早就被打掉了。*
+<p align="center"><i>第 4 关：前面几步走得很顺，到了最后推箱子的一步，手里只剩红桃 6，而箱子所在的地台需要方块或 A。需要的那张牌早就被打掉了。</i></p>
 
 > 路线看起来畅通，不代表手牌足够；手里还有很多牌，也不代表每张都有用。
 
@@ -106,7 +106,7 @@
 
 我自己游玩时发现，场上只有一个箱子和一个目标时其实挺简单，需要思考的深度和步数都不多；但随着箱子数量增加，需要的思考深度和长期规划能力会成倍增长。开发头几天我就觉得太难，于是加了一个显示最佳路径的功能，游戏中按 H 即可。可实际玩下来，就算开着这个“外挂”，我还是很容易在开局就打出了最后一步才需要的牌，然后 Game Over。
 
-<p align="center"><img src="Docs/Images/hint_path.png" width="640" alt="H 键路线提示"></p>
+<p align="center"><img src="Docs/Images/hint_path.png" width="720" alt="H 键路线提示"></p>
 
 <p align="center"><i>按 H 显示最佳路线：黄色虚线是求解器算出的推荐走法，黄圈标出路线的终点，绿色虚线框是目标地台。</i></p>
 
