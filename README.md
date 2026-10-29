@@ -36,12 +36,34 @@
 
 山路难行，就找个地方生火休息；穿过草地，用指南针辨认方向；城门拦路，试着和守卫谈谈价钱；遇上水域，就搭一艘船。四种花色不只是通行标记，也对应伊蕾娜旅途中四种赶路的办法。
 
-| 花色 | 卡牌 | 对应地形 |
-|:---:|:---:|:---:|
-| ♠ 黑桃 | 篝火 | 山地 |
-| ♥ 红桃 | 指南针 | 草地 |
-| ♣ 梅花 | 贿赂守卫 | 城镇 |
-| ♦ 方块 | 帆船 | 水域 |
+<table>
+  <tr>
+    <th width="25%">♠ 黑桃 · 篝火</th>
+    <th width="25%">♥ 红桃 · 指南针</th>
+    <th width="25%">♣ 梅花 · 贿赂守卫</th>
+    <th width="25%">♦ 方块 · 帆船</th>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><img src="Docs/Images/card_spade.png" width="180" alt="篝火"></td>
+    <td align="center" valign="top"><img src="Docs/Images/card_heart.png" width="180" alt="指南针"></td>
+    <td align="center" valign="top"><img src="Docs/Images/card_club.png" width="180" alt="贿赂守卫"></td>
+    <td align="center" valign="top"><img src="Docs/Images/card_diamond.png" width="180" alt="帆船"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>山地</b></td>
+    <td align="center"><b>草地和森林</b></td>
+    <td align="center"><b>城镇</b></td>
+    <td align="center"><b>水域</b></td>
+  </tr>
+  <tr>
+    <td valign="top">山路漫长而寒冷，在石洞里点燃篝火，休息取暖，再继续翻山。</td>
+    <td valign="top">穿过草地和森林时容易迷路，靠指南针辨认方向。</td>
+    <td valign="top">魔法师徽章被偷走了，只好用金钱打点守卫进城。</td>
+    <td valign="top">大片水域没法飞过去，只能买船票坐船。</td>
+  </tr>
+</table>
+
+每张普通牌都只能让伊蕾娜移动一格：花色对上，就是用对的方法走对的路；点数对上，就轮到她想点别的办法了。
 
 ## 同花色走正路，同点数想办法
 
