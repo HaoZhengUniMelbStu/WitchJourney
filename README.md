@@ -4,7 +4,7 @@
 
 《魔女之旅》是一款以魔女伊蕾娜的旅行为主题的单人解谜游戏，把六边形推箱子、扑克牌匹配和手牌规划放进了同一道题里。你一边安排旅途，一边把箱子推到目标地台上。
 
-![魔女之旅 主菜单](Docs/Images/main_menu.png)
+![魔女之旅 主菜单](Docs/Images/main_menu.gif)
 
 **[下载可游玩版本（Windows）](https://github.com/HaoZhengUniMelbStu/WitchJourney/releases/latest)**
 
