@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "kurogameExamDemoCharacter.h"
+#include "WitchJourneyCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Camera/CameraComponent.h"
 #include "Components/DecalComponent.h"
@@ -11,7 +11,7 @@
 #include "Materials/Material.h"
 #include "Engine/World.h"
 
-AkurogameExamDemoCharacter::AkurogameExamDemoCharacter()
+AWitchJourneyCharacter::AWitchJourneyCharacter()
 {
 	// Set size for player capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -45,7 +45,7 @@ AkurogameExamDemoCharacter::AkurogameExamDemoCharacter()
 	PrimaryActorTick.bStartWithTickEnabled = true;
 }
 
-void AkurogameExamDemoCharacter::Tick(float DeltaSeconds)
+void AWitchJourneyCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 }

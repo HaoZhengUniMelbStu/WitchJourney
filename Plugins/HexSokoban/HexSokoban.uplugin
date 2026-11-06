@@ -5,7 +5,7 @@
 	"FriendlyName": "Hex Sokoban",
 	"Description": "Hexagonal Sokoban gameplay framework: hex tiles, goal tiles, pushable boxes, a grid movement component and a complete puzzle game loop (undo / restart / next level).",
 	"Category": "Gameplay",
-	"CreatedBy": "kurogameExamDemo",
+	"CreatedBy": "WitchJourney",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"Installed": false,

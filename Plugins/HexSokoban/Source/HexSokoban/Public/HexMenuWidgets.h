@@ -139,6 +139,7 @@ protected:
 	UPROPERTY(Transient) TObjectPtr<UHexMenuButton> StartButton;
 
 	EHexMenuScreen Current = EHexMenuScreen::Main;
+	float StartupLanguageElapsed = 0.f;
 	float MainAlpha = 1.f;
 	float SelectAlpha = 0.f;
 };

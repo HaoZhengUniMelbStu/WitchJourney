@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class kurogameExamDemo : ModuleRules
+public class WitchJourney : ModuleRules
 {
-	public kurogameExamDemo(ReadOnlyTargetRules Target) : base(Target)
+	public WitchJourney(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 

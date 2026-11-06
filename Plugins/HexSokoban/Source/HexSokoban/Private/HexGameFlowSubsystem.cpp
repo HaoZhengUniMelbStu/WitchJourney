@@ -59,6 +59,7 @@ bool FHexLevelDefinition::IsPlayable(FString* OutReason) const
 void UHexGameFlowSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
+	FHexLocalization::BeginSession();
 	ReloadLevels();
 	LoadSave();
 }

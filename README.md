@@ -188,14 +188,14 @@
 ## 项目开发
 
 - 引擎：**Unreal Engine 5.5.4**
-- 工程入口：`kurogameExamDemo.uproject`
+- 工程入口：`WitchJourney.uproject`
 - 核心玩法代码：`Plugins/HexSokoban`
 
 ### 编译运行
 
 1. 安装 Unreal Engine 5.5.4 和 Visual Studio 2022（含“使用 C++ 的游戏开发”工作负载）。
-2. 克隆本仓库后，右键 `kurogameExamDemo.uproject` → **Generate Visual Studio project files**。
-3. 打开生成的 `kurogameExamDemo.sln`，以 `Development Editor | Win64` 编译；或直接双击 `.uproject`，在提示时选择重新编译模块。
+2. 克隆本仓库后，右键 `WitchJourney.uproject` → **Generate Visual Studio project files**。
+3. 打开生成的 `WitchJourney.sln`，以 `Development Editor | Win64` 编译；或直接双击 `.uproject`，在提示时选择重新编译模块。
 
 仓库只包含资源与代码源文件，`Binaries/`、`Intermediate/`、`Saved/`、`DerivedDataCache/` 等生成目录已通过 `.gitignore` 排除。
 

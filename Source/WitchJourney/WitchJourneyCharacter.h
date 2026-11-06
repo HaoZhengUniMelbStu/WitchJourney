@@ -4,15 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "kurogameExamDemoCharacter.generated.h"
+#include "WitchJourneyCharacter.generated.h"
 
 UCLASS(Blueprintable)
-class AkurogameExamDemoCharacter : public ACharacter
+class AWitchJourneyCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
-	AkurogameExamDemoCharacter();
+	AWitchJourneyCharacter();
 
 	// Called every frame.
 	virtual void Tick(float DeltaSeconds) override;

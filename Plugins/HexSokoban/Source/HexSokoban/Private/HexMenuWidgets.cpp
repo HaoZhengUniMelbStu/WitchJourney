@@ -813,6 +813,14 @@ FReply UHexMenuWidget::NativeOnKeyDown(const FGeometry& InGeometry, const FKeyEv
 void UHexMenuWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
 	Super::NativeTick(MyGeometry, InDeltaTime);
+	// Present the English menu before resolving the player's OS language.
+	StartupLanguageElapsed += FMath::Min(InDeltaTime, 0.05f);
+	if (StartupLanguageElapsed >= 0.75f && FHexLocalization::ApplyStartupLanguage(GIsEditor))
+	{
+		if (auto* Flow = UHexGameFlowSubsystem::Get(this)) Flow->OpenMenu(Current);
+		return;
+	}
+
 	const float DeltaTime = FMath::Min(InDeltaTime, 0.05f);
 	// Eased cross-slide between the two screens.
 	MainAlpha = FMath::FInterpTo(MainAlpha, Current == EHexMenuScreen::Main ? 1.f : 0.f, DeltaTime, 10.f);

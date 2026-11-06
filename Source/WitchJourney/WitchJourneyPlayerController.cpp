@@ -1,11 +1,11 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "kurogameExamDemoPlayerController.h"
+#include "WitchJourneyPlayerController.h"
 #include "GameFramework/Pawn.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "NiagaraSystem.h"
 #include "NiagaraFunctionLibrary.h"
-#include "kurogameExamDemoCharacter.h"
+#include "WitchJourneyCharacter.h"
 #include "Engine/World.h"
 #include "EnhancedInputComponent.h"
 #include "InputActionValue.h"
@@ -14,7 +14,7 @@
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
-AkurogameExamDemoPlayerController::AkurogameExamDemoPlayerController()
+AWitchJourneyPlayerController::AWitchJourneyPlayerController()
 {
 	bShowMouseCursor = true;
 	DefaultMouseCursor = EMouseCursor::Default;
@@ -22,13 +22,13 @@ AkurogameExamDemoPlayerController::AkurogameExamDemoPlayerController()
 	FollowTime = 0.f;
 }
 
-void AkurogameExamDemoPlayerController::BeginPlay()
+void AWitchJourneyPlayerController::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
 }
 
-void AkurogameExamDemoPlayerController::SetupInputComponent()
+void AWitchJourneyPlayerController::SetupInputComponent()
 {
 	// set up gameplay key bindings
 	Super::SetupInputComponent();
@@ -43,16 +43,16 @@ void AkurogameExamDemoPlayerController::SetupInputComponent()
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(InputComponent))
 	{
 		// Setup mouse input events
-		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Started, this, &AkurogameExamDemoPlayerController::OnInputStarted);
-		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Triggered, this, &AkurogameExamDemoPlayerController::OnSetDestinationTriggered);
-		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Completed, this, &AkurogameExamDemoPlayerController::OnSetDestinationReleased);
-		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Canceled, this, &AkurogameExamDemoPlayerController::OnSetDestinationReleased);
+		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Started, this, &AWitchJourneyPlayerController::OnInputStarted);
+		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Triggered, this, &AWitchJourneyPlayerController::OnSetDestinationTriggered);
+		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Completed, this, &AWitchJourneyPlayerController::OnSetDestinationReleased);
+		EnhancedInputComponent->BindAction(SetDestinationClickAction, ETriggerEvent::Canceled, this, &AWitchJourneyPlayerController::OnSetDestinationReleased);
 
 		// Setup touch input events
-		EnhancedInputComponent->BindAction(SetDestinationTouchAction, ETriggerEvent::Started, this, &AkurogameExamDemoPlayerController::OnInputStarted);
-		EnhancedInputComponent->BindAction(SetDestinationTouchAction, ETriggerEvent::Triggered, this, &AkurogameExamDemoPlayerController::OnTouchTriggered);
-		EnhancedInputComponent->BindAction(SetDestinationTouchAction, ETriggerEvent::Completed, this, &AkurogameExamDemoPlayerController::OnTouchReleased);
-		EnhancedInputComponent->BindAction(SetDestinationTouchAction, ETriggerEvent::Canceled, this, &AkurogameExamDemoPlayerController::OnTouchReleased);
+		EnhancedInputComponent->BindAction(SetDestinationTouchAction, ETriggerEvent::Started, this, &AWitchJourneyPlayerController::OnInputStarted);
+		EnhancedInputComponent->BindAction(SetDestinationTouchAction, ETriggerEvent::Triggered, this, &AWitchJourneyPlayerController::OnTouchTriggered);
+		EnhancedInputComponent->BindAction(SetDestinationTouchAction, ETriggerEvent::Completed, this, &AWitchJourneyPlayerController::OnTouchReleased);
+		EnhancedInputComponent->BindAction(SetDestinationTouchAction, ETriggerEvent::Canceled, this, &AWitchJourneyPlayerController::OnTouchReleased);
 	}
 	else
 	{
@@ -60,13 +60,13 @@ void AkurogameExamDemoPlayerController::SetupInputComponent()
 	}
 }
 
-void AkurogameExamDemoPlayerController::OnInputStarted()
+void AWitchJourneyPlayerController::OnInputStarted()
 {
 	StopMovement();
 }
 
 // Triggered every frame when the input is held down
-void AkurogameExamDemoPlayerController::OnSetDestinationTriggered()
+void AWitchJourneyPlayerController::OnSetDestinationTriggered()
 {
 	// We flag that the input is being pressed
 	FollowTime += GetWorld()->GetDeltaSeconds();
@@ -98,7 +98,7 @@ void AkurogameExamDemoPlayerController::OnSetDestinationTriggered()
 	}
 }
 
-void AkurogameExamDemoPlayerController::OnSetDestinationReleased()
+void AWitchJourneyPlayerController::OnSetDestinationReleased()
 {
 	// If it was a short press
 	if (FollowTime <= ShortPressThreshold)
@@ -112,13 +112,13 @@ void AkurogameExamDemoPlayerController::OnSetDestinationReleased()
 }
 
 // Triggered every frame when the input is held down
-void AkurogameExamDemoPlayerController::OnTouchTriggered()
+void AWitchJourneyPlayerController::OnTouchTriggered()
 {
 	bIsTouch = true;
 	OnSetDestinationTriggered();
 }
 
-void AkurogameExamDemoPlayerController::OnTouchReleased()
+void AWitchJourneyPlayerController::OnTouchReleased()
 {
 	bIsTouch = false;
 	OnSetDestinationReleased();

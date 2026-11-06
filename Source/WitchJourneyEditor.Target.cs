@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class kurogameExamDemoEditorTarget : TargetRules
+public class WitchJourneyEditorTarget : TargetRules
 {
-	public kurogameExamDemoEditorTarget(TargetInfo Target) : base(Target)
+	public WitchJourneyEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
-		ExtraModuleNames.Add("kurogameExamDemo");
+		ExtraModuleNames.Add("WitchJourney");
 	}
 }

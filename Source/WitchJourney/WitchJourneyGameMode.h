@@ -4,15 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "kurogameExamDemoGameMode.generated.h"
+#include "WitchJourneyGameMode.generated.h"
 
 UCLASS(minimalapi)
-class AkurogameExamDemoGameMode : public AGameModeBase
+class AWitchJourneyGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
-	AkurogameExamDemoGameMode();
+	AWitchJourneyGameMode();
 };
 
 

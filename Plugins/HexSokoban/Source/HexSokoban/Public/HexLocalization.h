@@ -7,6 +7,8 @@ class HEXSOKOBAN_API FHexLocalization
 {
 public:
 	static void Initialize();
+	static void BeginSession();
+	static bool ApplyStartupLanguage(bool bEditorSession);
 	static int32 GetLanguage(); // Chinese, Japanese, English, Korean
 	static int32 ResolveSystemLanguage(const FString& Culture);
 	static void Cycle();

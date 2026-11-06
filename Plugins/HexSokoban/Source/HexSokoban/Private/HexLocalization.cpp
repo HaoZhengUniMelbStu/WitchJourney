@@ -21,24 +21,33 @@ int32 FHexLocalization::ResolveSystemLanguage(const FString& Culture)
 
 void FHexLocalization::Initialize()
 {
-	if(Language!=INDEX_NONE) return;
-	FConfigFile Preferences;
-	Preferences.Read(PreferenceFile());
-	int32 Saved=INDEX_NONE;
-	if(Preferences.GetInt(TEXT("Language"),TEXT("Selection"),Saved) && Saved>=0 && Saved<4)
-		Language=Saved;
-	else
-	{
-		Language=ResolveSystemLanguage(FPlatformMisc::GetDefaultLanguage());
-		Preferences.SetString(TEXT("Language"),TEXT("Selection"),*FString::FromInt(Language));
-		Preferences.Write(PreferenceFile());
-	}
+	if (Language == INDEX_NONE) Language = 2;
+}
+
+namespace { bool StartupLanguagePending = true; }
+
+void FHexLocalization::BeginSession()
+{
+	Language = 2;
+	StartupLanguagePending = true;
+}
+
+bool FHexLocalization::ApplyStartupLanguage(bool bEditorSession)
+{
+	if (!StartupLanguagePending) return false;
+	StartupLanguagePending = false;
+	if (bEditorSession) return false;
+	const int32 Target = ResolveSystemLanguage(FPlatformMisc::GetDefaultLanguage());
+	const bool bChanged = Language != Target;
+	Language = Target;
+	return bChanged;
 }
 
 int32 FHexLocalization::GetLanguage() { Initialize(); return Language; }
 
 void FHexLocalization::Cycle()
 {
+	StartupLanguagePending = false;
 	Language=(GetLanguage()+1)%4;
 	FConfigFile Preferences;
 	Preferences.SetString(TEXT("Language"),TEXT("Selection"),*FString::FromInt(Language));
@@ -71,6 +80,11 @@ bool FHexLanguageTest::RunTest(const FString& Parameters)
 	TestEqual(TEXT("Korean system"),FHexLocalization::ResolveSystemLanguage(TEXT("ko-KR")),3);
 	TestEqual(TEXT("Unsupported falls back to English"),FHexLocalization::ResolveSystemLanguage(TEXT("fr-FR")),2);
 	const int32 Original=Language;
+	const bool OriginalPending = StartupLanguagePending;
+	FHexLocalization::BeginSession();
+	TestEqual(TEXT("Session starts in English"), FHexLocalization::GetLanguage(), 2);
+	TestFalse(TEXT("Editor keeps English"), FHexLocalization::ApplyStartupLanguage(true));
+	TestEqual(TEXT("Editor language"), FHexLocalization::GetLanguage(), 2);
 	FString OriginalFile; const bool HadFile=FFileHelper::LoadFileToString(OriginalFile,*PreferenceFile());
 	for(int32 I=0;I<4;++I)
 	{
@@ -85,9 +99,10 @@ bool FHexLanguageTest::RunTest(const FString& Parameters)
 		TestEqual(TEXT("Cycle follows Chinese Japanese English Korean"),Language,(I+1)%4);
 		TestNotEqual(TEXT("Label changes immediately"),FString(HEXT("语言")),Before);
 		Language=INDEX_NONE;
-		TestEqual(TEXT("Saved choice overrides system on next initialization"),FHexLocalization::GetLanguage(),(I+1)%4);
+		TestEqual(TEXT("Initialization always starts in English"),FHexLocalization::GetLanguage(),2);
 	}
 	Language=Original;
+	StartupLanguagePending = OriginalPending;
 	if(HadFile) FFileHelper::SaveStringToFile(OriginalFile,*PreferenceFile());
 	else IFileManager::Get().Delete(*PreferenceFile());
 	return true;
