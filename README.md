@@ -14,7 +14,7 @@ The Witch's Journey is a single-player puzzle game inspired by the travels of th
 
 ## How the game began
 
-The initial idea came from playing *Chen Xing Zhi Xu*. It made me reconsider Sokoban: on a square grid, boxes can only be approached from four directions, which limits the combinations of approaches and routes available for interesting levels. I wondered whether changing the board's shape would help.
+The initial idea came from playing *Order of the Sinking Star*. It made me reconsider Sokoban: on a square grid, boxes can only be approached from four directions, which limits the combinations of approaches and routes available for interesting levels. I wondered whether changing the board's shape would help.
 
 Only three regular polygons can tile a plane on their own: squares, equilateral triangles, and regular hexagons. Equilateral triangles have no parallel opposite edges, making it awkward to keep pushing a box forward after it enters the next tile. Requiring the player to change sides would lose the clean feeling of a straight push and introduce awkward angles. I chose regular hexagons instead: six directions for approaching and pushing boxes immediately opened up more routes.
 
