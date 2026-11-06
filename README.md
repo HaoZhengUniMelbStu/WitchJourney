@@ -1,208 +1,208 @@
-# 魔女之旅 · Hex Sokoban
+# The Witch's Journey · Hex Sokoban
 
-> 每走一步都要打出一张牌。眼前最顺手的那张，可能正是之后最需要的那张。
+> Every step costs a card. The easiest card to play now may be the one you need most later.
 
-《魔女之旅》是一款以魔女伊蕾娜的旅行为主题的单人解谜游戏，把六边形推箱子、扑克牌匹配和手牌规划放进了同一道题里。你一边安排旅途，一边把箱子推到目标地台上。
+The Witch's Journey is a single-player puzzle game inspired by the travels of the witch Elaina. It combines hexagonal Sokoban, playing-card matching, and hand management: plan your journey while pushing every box onto a goal tile.
 
-<p align="center"><img src="Docs/Images/main_menu.gif" width="800" alt="魔女之旅 主菜单"></p>
+<p align="center"><img src="Docs/Images/main_menu.gif" width="800" alt="The Witch's Journey main menu"></p>
 
-<p align="center"><img src="Docs/Images/gameplay.png" width="800" alt="魔女之旅 游玩画面"></p>
+<p align="center"><img src="Docs/Images/gameplay.png" width="800" alt="The Witch's Journey gameplay"></p>
 
-<p align="center"><b><a href="https://github.com/HaoZhengUniMelbStu/WitchJourney/releases/latest">⬇ 下载可游玩版本（Windows）</a></b></p>
-
----
-
-## 这个游戏是怎么来的
-
-最开始想到这个玩法，是因为最近在玩《沉星之序》。它让我重新想了一遍推箱子：十字方格上的推箱子只有四个方向，箱子的接近方式和路线组合比较少，很难设计出足够多样的有趣关卡。所以我想，能不能先从棋盘的形状开始改？
-
-能密铺平面的正多边形只有三种：正方形、等边三角形和正六边形。等边三角形没有一组相对的平行边，箱子推进下一格之后很难设计怎么继续往前推；如果改成需要换边推，推起来就没有那种干脆的推进感，角度也成问题。因此最后我选了正六边形：六个方向都能接近和推动箱子，路线一下子丰富了很多。
-
-但问题随之而来：六边形的输入方式是什么？WASD 显然不适合六个方向的移动。那用鼠标点击？我在最早期的 Demo 里确实是这么做的。地图小的时候还好，地图一大，弊端就出来了：六边形和相邻的六个地台紧密相接，点击很容易误触，玩起来要经常撤回，有点卡手。
-
-更大的问题在玩法上限。推箱子本质上是一个图论问题，玩家只要找到那条路线就能通关，地图设计得再复杂，花样也就那么些，单调且缺少挑战。所以我引入了另一种玩法。
-
-另一半灵感来自我在墨尔本大学 **AI Planning** 课程锦标赛里接触到的扑克牌连线桌游 *Sequence*。棋盘的每一格对应一张扑克牌，玩家手里有几张牌，打出哪张牌，就能在对应的格子上落子，最后连成五子获胜。我很喜欢“手里牌的点数和花色决定你能走到哪里”这种对应关系：玩家摸到手牌后要思考先落哪个、后落哪个，一下子就把简单的五子连线变成了一个既有随机性、又需要思考的桌游。于是我就想：能不能把它和推箱子结合起来？
-
-<p align="center"><img src="Docs/Images/prototype.png" width="600" alt="早期原型"></p>
-
-<p align="center"><i>最早的玩法原型：六边形地台上标着花色和点数，底部是手牌，打出匹配的牌才能走上相邻的地台。</i></p>
-
-结果就是现在的《魔女之旅》：**每个地台都有一种花色和一个点数，你只能打出花色相同或者点数相同的手牌，才能走上去。** 这是整个游戏最基本也最核心的规则，后面的技能牌都是在这套系统上锦上添花。出牌方式也从点击地台改成了把手牌拖到相邻地台上，顺带解决了误触的问题。
+<p align="center"><b><a href="https://github.com/HaoZhengUniMelbStu/WitchJourney/releases/latest">⬇ Download the playable Windows build</a></b></p>
 
 ---
 
-## 一张牌就是一种赶路的方法
+## How the game began
 
-山路难行，就找个地方生火休息；穿过草地，用指南针辨认方向；城门拦路，试着和守卫谈谈价钱；遇上水域，就搭一艘船。四种花色不只是通行标记，也对应伊蕾娜旅途中四种赶路的办法。
+The initial idea came from playing *Chen Xing Zhi Xu*. It made me reconsider Sokoban: on a square grid, boxes can only be approached from four directions, which limits the combinations of approaches and routes available for interesting levels. I wondered whether changing the board's shape would help.
+
+Only three regular polygons can tile a plane on their own: squares, equilateral triangles, and regular hexagons. Equilateral triangles have no parallel opposite edges, making it awkward to keep pushing a box forward after it enters the next tile. Requiring the player to change sides would lose the clean feeling of a straight push and introduce awkward angles. I chose regular hexagons instead: six directions for approaching and pushing boxes immediately opened up more routes.
+
+That brought a new question: how should movement work? WASD does not naturally fit six directions. Mouse clicks? That was how the earliest demo worked. It was fine on small maps, but on larger ones, each hexagon and its six neighbors were so tightly packed that misclicks became common. Constantly undoing moves made the controls feel clumsy.
+
+There was also a limit to the gameplay itself. Sokoban is fundamentally a graph problem: once you find the right route, you can finish the level. More elaborate maps alone did not give me the variety and challenge I wanted, so I introduced another mechanic.
+
+The other half of the idea came from *Sequence*, a card-based board game I encountered in a tournament for the University of Melbourne's **AI Planning** course. Each board space corresponds to a playing card. Players play cards from their hands to place pieces on matching spaces, aiming to make a row of five. I liked how the suits and ranks in your hand determine where you can go. Deciding which card to use first turns a simple five-in-a-row objective into a game of both chance and planning. Could that work with Sokoban?
+
+<p align="center"><img src="Docs/Images/prototype.png" width="600" alt="Early gameplay prototype"></p>
+
+<p align="center"><i>The earliest prototype: hexagonal tiles display suits and ranks, with cards along the bottom. Play a matching card to step onto an adjacent tile.</i></p>
+
+The result is The Witch's Journey: **every tile has a suit and a rank, and you can only enter it by playing a card that matches either its suit or its rank.** This is the central rule; skill cards build on top of it. Playing a card also changed from clicking a tile to dragging a card onto an adjacent tile, helping resolve the misclick problem.
+
+---
+
+## Every card is a way to travel
+
+When the mountain road is harsh, find somewhere to light a fire and rest. Use a compass to cross grasslands. If the city guards block your way, negotiate a price. When you reach water, board a boat. The four suits are more than access symbols: each represents one of Elaina's ways of getting around.
 
 <table>
   <tr>
-    <th width="25%">♠ 黑桃 · 篝火</th>
-    <th width="25%">♥ 红桃 · 指南针</th>
-    <th width="25%">♣ 梅花 · 贿赂守卫</th>
-    <th width="25%">♦ 方块 · 帆船</th>
+    <th width="25%">♠ Spades · Campfire</th>
+    <th width="25%">♥ Hearts · Compass</th>
+    <th width="25%">♣ Clubs · Bribe the Guards</th>
+    <th width="25%">♦ Diamonds · Sailboat</th>
   </tr>
   <tr>
-    <td align="center" valign="top"><img src="Docs/Images/card_spade.png" width="180" alt="篝火"></td>
-    <td align="center" valign="top"><img src="Docs/Images/card_heart.png" width="180" alt="指南针"></td>
-    <td align="center" valign="top"><img src="Docs/Images/card_club.png" width="180" alt="贿赂守卫"></td>
-    <td align="center" valign="top"><img src="Docs/Images/card_diamond.png" width="180" alt="帆船"></td>
+    <td align="center" valign="top"><img src="Docs/Images/card_spade.png" width="180" alt="Campfire"></td>
+    <td align="center" valign="top"><img src="Docs/Images/card_heart.png" width="180" alt="Compass"></td>
+    <td align="center" valign="top"><img src="Docs/Images/card_club.png" width="180" alt="Bribe the Guards"></td>
+    <td align="center" valign="top"><img src="Docs/Images/card_diamond.png" width="180" alt="Sailboat"></td>
   </tr>
   <tr>
-    <td align="center"><b>山地</b></td>
-    <td align="center"><b>草地和森林</b></td>
-    <td align="center"><b>城镇</b></td>
-    <td align="center"><b>水域</b></td>
+    <td align="center"><b>Mountains</b></td>
+    <td align="center"><b>Grasslands and forests</b></td>
+    <td align="center"><b>Towns</b></td>
+    <td align="center"><b>Water</b></td>
   </tr>
   <tr>
-    <td valign="top">山路漫长而寒冷，在石洞里点燃篝火，休息取暖，再继续翻山。</td>
-    <td valign="top">穿过草地和森林时容易迷路，靠指南针辨认方向。</td>
-    <td valign="top">魔法师徽章被偷走了，只好用金钱打点守卫进城。</td>
-    <td valign="top">大片水域没法飞过去，只能买船票坐船。</td>
+    <td valign="top">Mountain roads are long and cold. Light a campfire in a cave, rest and warm up, then continue across the mountains.</td>
+    <td valign="top">It is easy to lose your way in grasslands and forests. A compass keeps you on course.</td>
+    <td valign="top">With her witch's brooch stolen, Elaina has to pay off the guards to enter town.</td>
+    <td valign="top">Large stretches of water cannot be crossed by flying. Buy a ticket and take a boat.</td>
   </tr>
 </table>
 
-每张普通牌都只能让伊蕾娜移动一格：花色对上，就是用对的方法走对的路；点数对上，就轮到她想点别的办法了。
+Each ordinary card moves Elaina one tile. Matching the suit means using the right method for the terrain; matching the rank means finding another way.
 
-## 同花色走正路，同点数想办法
+## Match the suit, or improvise with the rank
 
-花色相同，就是用对的方法走对的路：红桃 5 可以带你穿过任意点数的草地。
+A matching suit gives you the straightforward route: the five of hearts lets you cross any grassland tile, regardless of rank.
 
-<p align="center"><img src="Docs/Images/same_suit.gif" width="640" alt="同花色走正路"></p>
+<p align="center"><img src="Docs/Images/same_suit.gif" width="640" alt="Moving with a matching suit"></p>
 
-<p align="center"><i>同花色：打出红桃牌“指南针”，伊蕾娜穿过草地。</i></p>
+<p align="center"><i>Matching suit: play a heart card, Compass, to guide Elaina across grassland.</i></p>
 
-不过伊蕾娜是个古灵精怪的屑魔女，她总有些取巧的办法。点数相同的时候，红桃 5 也能让你走上**方块 5** 的水域：指南针并没有突然变成船，而是成了伊蕾娜换取船票的筹码。右侧的**旅行报幕**会像旅行日记一样，把这些临场发挥记下来。
+But Elaina is a mischievous, resourceful witch, always ready to find a shortcut. With a matching rank, the five of hearts can also take you onto a **five of diamonds** water tile. The compass has not turned into a boat: it has become something she can trade for a ticket. The **travel narration** on the right records these improvised solutions like a travel diary.
 
-<p align="center"><img src="Docs/Images/same_rank.gif" width="640" alt="同点数想办法"></p>
+<p align="center"><img src="Docs/Images/same_rank.gif" width="640" alt="Improvising with a matching rank"></p>
 
-<p align="center"><i>同点数：用梅花 6“贿赂守卫”走上方块 6 的水域，旅行报幕记下“伊蕾娜在镇上买到了一张船票，通过了水域”。</i></p>
+<p align="center"><i>Matching rank: play the six of clubs, Bribe the Guards, to enter a six of diamonds water tile. The narration records: "Elaina bought a boat ticket in town and crossed the water."</i></p>
 
-<p align="center"><img src="Docs/Images/narration.png" width="560" alt="旅行报幕"></p>
+<p align="center"><img src="Docs/Images/narration.png" width="560" alt="Travel narration"></p>
 
-<p align="center"><i>旅行报幕：每次出牌，画面右侧都会写下一句旅途记录。打出的 4 种花色 × 进入的 4 种地形，共 16 种组合，各有各的说法。</i></p>
+<p align="center"><i>Travel narration: each card played adds a short travel entry on the right. Four card suits × four terrain types produce 16 combinations, each with its own text.</i></p>
 
-这条规则有一个刻意的数值设计：花色只有 4 种，地台上的点数却是 1–10 共 10 种。随手抓一张牌，花色对上的机会远大于点数对上的机会。所以游戏鼓励你在正确的地形用正确的方法，但也给伊蕾娜留下了随机应变的空间，让每一步出牌多一层取舍。
+There is a deliberate numerical choice behind this rule: there are only four suits, but ten tile ranks, from 1 to 10. A randomly chosen card is much more likely to match a suit than a rank. This encourages the right method for the right terrain while leaving room for Elaina to improvise, adding another trade-off to every card played.
 
-## 手牌是有限的
+## Your cards are limited
 
-每关开始时你会拿到一组固定的手牌，打一张少一张，**并且保证至少存在一种出牌顺序可以通关**。
+Each level starts with a fixed set of cards. Every card you play is used up, and **at least one sequence of card plays is guaranteed to solve the level**.
 
-为此我在关卡编辑器里做了两个工具：
+I built two tools into the level editor to support this:
 
-- **解法判定**：一个基于图搜索的求解器。它把“棋盘局面 + 已用的牌 + 手里的牌”当作状态，用 A* 搜索验证当前地图和手牌能不能通关，并给出最少回合数。
-- **解法卡牌生成**：根据最优路线一键生成一套对应的手牌。设计者可以在此基础上替换其中一些牌，但每次修改都必须通过解法判定，确认仍然有解，才允许创建地图。
+- **Solution Check**: a graph-based solver that treats the board position, used cards, and remaining hand as a state. It uses A* search to check whether the current map and hand can be solved and reports the minimum turn count.
+- **Generate Solution Cards**: generates a matching hand from the optimal route in one click. Designers can then replace some cards, but every change must pass Solution Check before the map can be created.
 
-这个设计最有趣的地方在于：开局往往很轻松，牌多、路宽，怎么走都行；但随着手牌越来越少，你可能会发现，某一步需要的恰好是很久以前随手打掉的那张牌。这也是这个游戏在推箱子路径规划上最精华的部分。
+The most interesting part is how the pressure builds. Early on, you have plenty of cards and open paths. Later, with fewer cards left, you may discover that a move requires the exact card you casually spent much earlier. That is the heart of this game's approach to Sokoban route planning.
 
-<p align="center"><img src="Docs/Images/hand_runs_out.gif" width="640" alt="最需要的那张牌早就打掉了"></p>
+<p align="center"><img src="Docs/Images/hand_runs_out.gif" width="640" alt="The card you need has already been used"></p>
 
-<p align="center"><i>第 4 关：前面几步走得很顺，到了最后推箱子的一步，手里只剩红桃 6，而箱子所在的地台需要方块或 A。需要的那张牌早就被打掉了。</i></p>
+<p align="center"><i>Level 4: the opening moves go smoothly, but at the final box push, only the six of hearts remains. The box's tile requires a diamond or an ace. The card you need has already been spent.</i></p>
 
-> 路线看起来畅通，不代表手牌足够；手里还有很多牌，也不代表每张都有用。
+> An open route does not mean you have the cards to follow it. A full hand does not mean every card is useful.
 
-## 脑子不够？试试我提前准备好的桂
+## Stuck? Try the help I prepared
 
-我自己游玩时发现，场上只有一个箱子和一个目标时其实挺简单，需要思考的深度和步数都不多；但随着箱子数量增加，需要的思考深度和长期规划能力会成倍增长。开发头几天我就觉得太难，于是加了一个显示最佳路径的功能，游戏中按 H 即可。可实际玩下来，就算开着这个“外挂”，我还是很容易在开局就打出了最后一步才需要的牌，然后 Game Over。
+In my own playtests, one box and one goal were fairly manageable: neither the planning depth nor the number of moves was large. As more boxes were added, the need for deeper thinking and long-term planning grew dramatically. A few days into development, I already found it too hard, so I added an optimal-route hint, activated with H. Even with that "cheat," I still often spent a card at the beginning that I would need for the final step, then hit Game Over.
 
-<p align="center"><img src="Docs/Images/hint_path.png" width="720" alt="H 键路线提示"></p>
+<p align="center"><img src="Docs/Images/hint_path.png" width="720" alt="Route hints with the H key"></p>
 
-<p align="center"><i>按 H 显示最佳路线：黄色虚线是求解器算出的推荐走法，黄圈标出路线的终点，绿色虚线框是目标地台。</i></p>
+<p align="center"><i>Press H to show the optimal route. The yellow dashed line is the solver's recommendation, the yellow ring marks its endpoint, and green dashed outlines mark goal tiles.</i></p>
 
-因此我加入了三张技能牌 J、Q、K（未来打算加入更多）。获得方式是：当你打出的普通牌与目标地台的**花色和点数完全一致**，并且成功行动后，右下角会发给你一张技能牌。发哪一张也不是随机的：我根据玩家最优路径上还需要的花色和点数做了智能喂牌，尽量发给你最可能用得上的那张。技能牌同样带花色，只能作用在同花色的地台上。三张技能牌如下：
+I therefore added three skill cards: J, Q, and K, with more planned. After a successful move using an ordinary card that **matches both the suit and rank** of the destination tile, you receive a skill card in the lower-right corner. The choice is not purely random: the system considers the suits and ranks still needed along your optimal route and tries to give you a useful card. Skill cards also have suits and only affect matching-suit tiles.
 
 <table>
   <tr>
-    <th width="33%">J · 疾风刃</th>
-    <th width="33%">Q · 传送阵</th>
-    <th width="33%">K · 疾速飞行</th>
+    <th width="33%">J · Wind Blade</th>
+    <th width="33%">Q · Teleportation</th>
+    <th width="33%">K · Swift Flight</th>
   </tr>
   <tr>
-    <td align="center" valign="top"><img src="Docs/Images/skill_j.png" width="220" alt="疾风刃"></td>
-    <td align="center" valign="top"><img src="Docs/Images/skill_q.png" width="220" alt="传送阵"></td>
-    <td align="center" valign="top"><img src="Docs/Images/skill_k.png" width="220" alt="疾速飞行"></td>
+    <td align="center" valign="top"><img src="Docs/Images/skill_j.png" width="220" alt="Wind Blade"></td>
+    <td align="center" valign="top"><img src="Docs/Images/skill_q.png" width="220" alt="Teleportation"></td>
+    <td align="center" valign="top"><img src="Docs/Images/skill_k.png" width="220" alt="Swift Flight"></td>
   </tr>
   <tr>
-    <td valign="top"><b>原地击飞箱子</b><br>不用走过去，直接把相邻的同花色箱子推出两格，冲量还会传给前面的箱子。</td>
-    <td valign="top"><b>同花色瞬移</b><br>瞬间传送到全地图任意一个同花色的空地台，无视距离和障碍。</td>
-    <td valign="top"><b>直线飞行</b><br>沿六个方向之一飞到直线上的同花色空地台，途中不能越过空缺或箱子。</td>
+    <td valign="top"><b>Launch a box without moving</b><br>Push an adjacent box on a matching-suit tile up to two tiles away. The impulse can also transfer to boxes ahead.</td>
+    <td valign="top"><b>Teleport to a matching suit</b><br>Instantly reach any empty matching-suit tile on the map, ignoring distance and obstacles.</td>
+    <td valign="top"><b>Fly in a straight line</b><br>Fly in one of six directions to an empty matching-suit tile. You cannot cross gaps or boxes.</td>
   </tr>
   <tr>
-    <td align="center">消耗 <b>4</b> 步</td>
-    <td align="center">消耗 <b>6</b> 步</td>
-    <td align="center">消耗 <b>2</b> 步</td>
+    <td align="center">Costs <b>4</b> steps</td>
+    <td align="center">Costs <b>6</b> steps</td>
+    <td align="center">Costs <b>2</b> steps</td>
   </tr>
 </table>
 
-每张技能牌的详细规则见 Wiki 的[技能牌与抽牌](../../wiki/技能牌与抽牌)。
+See [Skill Cards and Draws](https://github.com/HaoZhengUniMelbStu/WitchJourney/wiki/Skill-Cards-and-Draws) in the Wiki for detailed rules.
 
-不过请注意，关卡的设计目标是**不依赖技能牌也能通关**。技能牌是用来降低难度、让更多玩家享受游戏的额外手段，给你留下改道和尝试意外解法的空间。如果你对自己的规划能力很有信心，不妨挑战一下不用任何技能牌通关。
+Levels are designed to be **solvable without skill cards**. These cards are optional help, making the game more approachable and giving you room to change course or try unexpected solutions. If you trust your planning, try finishing without them.
 
 ---
 
-## 目前可以体验的内容
+## What you can play now
 
-- 六方向推箱子与有限手牌规划
-- J、Q、K 三种技能牌
-- 卡牌悬停说明与带一点剧情的旅行报幕：打出的 4 种花色 × 进入的 4 种地形，共 16 种组合，每种都有对应的旅途记录
-- 普通关卡的路线提示和步数评级
-- 内置关卡编辑器（解法判定 + 解法卡牌生成）
-- 大地图性能模式：性能测试时我用 300 个地台拼了一张世界地图，结果持续的路径计算直接把游戏卡死了，于是专门做了这个模式，地台数量超过一定阈值后会自动启用，降低大尺寸地图下的计算压力
-- 多语言：中文 / 日本語 / English / 한국어。我觉得这个游戏还挺有意思的，之后想请我的墨大同学们也来玩一玩
+- Six-direction box pushing and limited-hand planning
+- Three skill cards: J, Q, and K
+- Card hover descriptions and short travel narration: four card suits × four terrain types, for 16 combinations with their own travel entries
+- Route hints and step-based ratings in normal levels
+- A built-in level editor with Solution Check and Generate Solution Cards
+- Large-map performance mode: during testing, a 300-tile world map froze the game with continuous path calculations. This mode activates automatically above a tile-count threshold to reduce the workload on large maps
+- Four languages: Chinese, Japanese, English, and Korean. I enjoy the game and hope to invite my University of Melbourne classmates to try it too
 
-## 操作
+## Controls
 
-| 操作 | 按键 |
+| Action | Input |
 |---|---|
-| 出牌 | 鼠标左键把手牌拖到目标地台 |
-| 查看卡牌说明 | 鼠标悬停在卡牌上 |
-| 撤销 | `Z` |
-| 重来 | `R` |
-| 提示（普通关卡） | `H` |
-| 暂停 | `Esc` |
-| 平移视角 | 右键拖动 |
-| 缩放 | 滚轮 |
+| Play a card | Left-drag a card from your hand onto the destination tile |
+| View a card description | Hover over the card |
+| Undo | `Z` |
+| Restart | `R` |
+| Hint (normal levels) | `H` |
+| Pause | `Esc` |
+| Pan the camera | Right-drag |
+| Zoom | Mouse wheel |
 
-所有箱子都到达目标地台后，关卡完成。
+The level is complete when every box is on a goal tile.
 
-## 自己搭建一段旅途
+## Build your own journey
 
-内置编辑器可以放置四种地台、箱子、目标和玩家起点，配置普通手牌，然后直接试玩。森林、山体、船只和建筑可以把抽象的棋盘搭成一段旅途。放了造景的地台本质上就是空洞，玩家到不了，可以用来封路、组织路线和视线。
+The built-in editor lets you place all four terrain types, boxes, goals, and the player start, configure the ordinary cards, and playtest immediately. Forests, mountains, boats, and buildings turn the abstract board into a journey. Tiles occupied by scenery effectively act as gaps: the player cannot enter them. Use them to block paths, organize routes, and guide the player's eye.
 
 ---
 
 ## Wiki
 
-| 页面 | 内容 |
+| Page | Contents |
 |---|---|
-| [基础规则与操作](../../wiki/基础规则与操作) | 地台、花色、点数、推箱子规则 |
-| [技能牌与抽牌](../../wiki/技能牌与抽牌) | J / Q / K 的效果、抽牌条件与计步 |
-| [提示与评级](../../wiki/提示与评级) | 路线提示和步数评级怎么算 |
-| [关卡编辑与造景](../../wiki/关卡编辑与造景) | 编辑器用法与可解性校验 |
-| [设计笔记](../../wiki/设计笔记) | 为什么是六边形，为什么是扑克牌 |
-| [常见问题](../../wiki/常见问题) | 遇到问题先看这里 |
+| [Rules and Controls](https://github.com/HaoZhengUniMelbStu/WitchJourney/wiki/Rules-and-Controls) | Tiles, suits, ranks, and box-pushing rules |
+| [Skill Cards and Draws](https://github.com/HaoZhengUniMelbStu/WitchJourney/wiki/Skill-Cards-and-Draws) | J / Q / K effects, draw conditions, and step costs |
+| [Hints and Ratings](https://github.com/HaoZhengUniMelbStu/WitchJourney/wiki/Hints-and-Ratings) | Route hints and step-based ratings |
+| [Level Editor and Scenery](https://github.com/HaoZhengUniMelbStu/WitchJourney/wiki/Level-Editor-and-Scenery) | Editor tools and solvability checks |
+| [Design Notes](https://github.com/HaoZhengUniMelbStu/WitchJourney/wiki/Design-Notes) | Why hexagons, and why playing cards? |
+| [FAQ](https://github.com/HaoZhengUniMelbStu/WitchJourney/wiki/FAQ) | Start here if something is unclear |
 
-建议先读“基础规则与操作”，再看“技能牌与抽牌”。想了解玩法从哪里来，可以读“设计笔记”。
+Start with Rules and Controls, then Skill Cards and Draws. For the thinking behind the game, read Design Notes.
 
-## 项目开发
+## Development
 
-- 引擎：**Unreal Engine 5.5.4**
-- 工程入口：`WitchJourney.uproject`
-- 核心玩法代码：`Plugins/HexSokoban`
+- Engine: **Unreal Engine 5.5.4**
+- Project entry point: `WitchJourney.uproject`
+- Core gameplay code: `Plugins/HexSokoban`
 
-### 编译运行
+### Build and run
 
-1. 安装 Unreal Engine 5.5.4 和 Visual Studio 2022（含“使用 C++ 的游戏开发”工作负载）。
-2. 克隆本仓库后，右键 `WitchJourney.uproject` → **Generate Visual Studio project files**。
-3. 打开生成的 `WitchJourney.sln`，以 `Development Editor | Win64` 编译；或直接双击 `.uproject`，在提示时选择重新编译模块。
+1. Install Unreal Engine 5.5.4 and Visual Studio 2022 with the **Game development with C++** workload.
+2. Clone this repository, right-click `WitchJourney.uproject`, and select **Generate Visual Studio project files**.
+3. Open `WitchJourney.sln` and build with `Development Editor | Win64`, or open the `.uproject` directly and rebuild the modules when prompted.
 
-仓库只包含资源与代码源文件，`Binaries/`、`Intermediate/`、`Saved/`、`DerivedDataCache/` 等生成目录已通过 `.gitignore` 排除。
+The repository contains source code and assets. Generated directories such as `Binaries/`, `Intermediate/`, `Saved/`, and `DerivedDataCache/` are excluded through `.gitignore`.
 
-## 反馈问题
+## Report a problem
 
-提 Issue 时请附上：关卡名称、所用语言、操作顺序，以及能看清手牌和棋盘的截图。
+When opening an issue, include the level name, selected language, steps to reproduce, and a screenshot that clearly shows the hand and board.
 
 ---
 
-<sub>本项目为个人非商业同人作品，角色与世界观取材自《魔女之旅》（白石定規），相关版权归原作者及权利方所有。</sub>
+<sub>This is a personal, non-commercial fan work. Its characters and setting are based on Wandering Witch: The Journey of Elaina by Jougi Shiraishi. All related rights belong to the original creator and respective rights holders.</sub>
